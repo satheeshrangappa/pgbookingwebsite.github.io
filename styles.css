@@ -1,0 +1,274 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Color Scheme */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #FF5733;
+    --accent-color: #34B7F1;
+    --dark-color: #333;
+    --light-color: #f9f9f9;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.book-btn {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.book-btn:hover {
+    background-color: #ff784e;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('OIP.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #58cdf8;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 50px 20px;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-container img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Highlights Section */
+#highlights {
+    padding: 50px 20px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    text-align: center;
+}
+
+#highlights h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+#highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+#highlights li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+#highlights li:hover {
+    color: var(--accent-color);
+}
+
+/* About, FAQ, and Contact Sections */
+.about-section, .faq-section, .contact-section {
+    padding: 50px 20px;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.about-section h1, .faq-section h1, .contact-section h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.about-section p, .faq-section p, .contact-section p {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Floating WhatsApp and Call Icons */
+.whatsapp-icon, .call-icon {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: var(--accent-color);
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.call-icon {
+    bottom: 20px;
+    background-color: var(--primary-color);
+}
+
+.whatsapp-icon img, .call-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-icon:hover, .call-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    padding: 15px;
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* Floating Call Icon */
+.call-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px; /* Adjust to sit below the WhatsApp icon */
+    right: 20px;
+    background-color: #34B7F1;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.call-float img {
+    width: 30px;
+    height: 30px;
+}
+
+.call-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Floating WhatsApp Icon */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
